@@ -27,8 +27,8 @@ public class AddressBookController {
     }
 
     @RequestMapping("/addBuddy")
-    public String addBuddy(@RequestParam(value = "name") String name, @RequestParam(value = "pnum") String pnum, Model model){
-        BuddyInfo b = new BuddyInfo(name,pnum);
+    public String addBuddy(@RequestParam(value = "name") String name, @RequestParam(value = "pnum") String pnum, @RequestParam(value = "addy") String addy,Model model){
+        BuddyInfo b = new BuddyInfo(name,pnum,addy);
         AddressBook a = repo.findAll().iterator().next();
         a.addBuddy(b);
         model.addAttribute("addressBook",a);
@@ -38,8 +38,8 @@ public class AddressBookController {
 
 
     @RequestMapping("/removeBuddy")
-    public String removeBuddy(@RequestParam(value = "name") String name, @RequestParam(value = "pnum") String pnum, Model model){
-        BuddyInfo b = new BuddyInfo(name,pnum);
+    public String removeBuddy(@RequestParam(value = "name") String name, @RequestParam(value = "pnum") String pnum, @RequestParam(value = "addy") String addy, Model model){
+        BuddyInfo b = new BuddyInfo(name,pnum,addy);
         AddressBook a = repo.findAll().iterator().next();
         a.removeBuddy(b);
 
