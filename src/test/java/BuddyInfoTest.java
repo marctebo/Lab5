@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  * Created by craigshorrocks on 1/12/2017.
- */
+ *//**
 public class BuddyInfoTest {
 
     private String name, name2, number, number2;
@@ -73,4 +73,4 @@ public class BuddyInfoTest {
         assertTrue(b.getPhoneNumber().equals(number2));
     }
 
-}
+}*/

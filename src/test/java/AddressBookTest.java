@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  * Created by craigshorrocks on 1/12/2017.
- */
+ *//**
 public class AddressBookTest {
     private AddressBook a;
     private BuddyInfo b1, b2;
@@ -74,4 +74,4 @@ public class AddressBookTest {
 
     }
 
-}
+}*/
