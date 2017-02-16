@@ -3,9 +3,6 @@ package jpa;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by craigshorrocks on 1/12/2017.
- */
 @Entity
 public class BuddyInfo {
 

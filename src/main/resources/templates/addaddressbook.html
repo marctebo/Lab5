@@ -1,10 +1,21 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Getting Started: Serving Web Content</title>
+        <title>AddressBook Web App</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <body>
-        <p th:text="'Hello, ' + ${addressBook.toString()} + '!'" />
+        <h1>Address Book</h1>
+        <form action="#" th:action = "@{/createAddressBook}" >
+            <p><input type="submit" value="Break Everything"/></p>
+        </form>
+        <form action="#" th:action = "@{/addBuddy}" >
+            <p>Name: <input type="text" th:field="*{buddy.name}" /></p>
+            <p>Number: <input type="text" th:field="*{buddy.phoneNumber}" /></p>
+            <p>Address: <input type="text" th:field="*{buddy.address}" /></p>
+            <p><input type="submit" value="Add Buddy"/></p>
+            <p><input type="submit" value="Remove Buddy" formaction="/removeBuddy"/></p>
+        </form>
+        <p th:text=" ${addressBook.toString()}"/>
     </body>
 </html>

@@ -1,6 +1,4 @@
-package jpa; /**
- * Created by craigshorrocks on 1/12/2017.
- */
+package jpa;
 import javax.persistence.Entity;
 import javax.persistence.*;
 import java.util.*;
@@ -55,8 +53,9 @@ public class AddressBook extends Observable{
 
     public String toString(){
         String output="";
+
         for(BuddyInfo b : buddies){
-            output+= "Name: " + b.getName() + "  Phone Number: " + b.getPhoneNumber() + " Address: " + b.getAddress() +"/n";
+            output+= "Name: " + b.getName() + "  Phone Number: " + b.getPhoneNumber() + " Address: " + b.getAddress() +"    ";
         }
 
         return output;
